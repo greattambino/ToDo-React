@@ -7,7 +7,7 @@ class Api::TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     if @todo.save
-      render json: @todo.id
+      render json: @todo
     else
       render json: {error: "ERROR!"}
     end
